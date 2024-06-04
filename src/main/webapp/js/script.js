@@ -1,7 +1,5 @@
-function searchAddress() {
+function searchAddress() {		//郵便番号を入力して決定を押すと住所を自動で入力してくれる
 	var zipCode = document.getElementById("zipCode").value;
-	// 郵便番号に対応する住所を取得するための処理を記述する
-	// ここではAPIを使用する例を示す
 	var apiUrl = "https://zipcloud.ibsnet.co.jp/api/search?zipcode=" + zipCode;
 	fetch(apiUrl)
 		.then(response => response.json())
@@ -14,14 +12,14 @@ function searchAddress() {
 }
 
 function goToUpdate() {
-	// ログインページへのURLを指定
+	// 会員情報更新ページへのURLを指定
 	var updatePageUrl = "userUpdate.jsp";
 	// ページを遷移
 	window.location.href = updatePageUrl;
 }
 
 function goToDelete() {
-	// ログインページへのURLを指定
+	// 退会ページへのURLを指定
 	var deletePageUrl = "userDelete.jsp";
 	// ページを遷移
 	window.location.href = deletePageUrl;

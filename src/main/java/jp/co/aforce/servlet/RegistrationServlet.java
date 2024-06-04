@@ -39,7 +39,7 @@ public class RegistrationServlet extends HttpServlet {
 		ArrayList<Information> list = dao.searchAll();
 		System.out.println("1");
 		boolean flag = true;
-		for (Information info : list) {
+		for (Information info : list) { //メールアドレスがすでに利用されていないか確認
 			System.out.println(info.getMail());
 			System.out.println(mail);
 			if (info.getMail().equals(mail)) {

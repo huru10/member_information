@@ -9,7 +9,7 @@ import jp.co.aforce.bean.Information;
 
 public class LoginDAO extends DAO {
 
-	public String search(String userId, String password) throws Exception {
+	public String search(String userId, String password) throws Exception { //ログイン時に使うサーチ機能
 
 		Information info = null;
 
@@ -40,7 +40,7 @@ public class LoginDAO extends DAO {
 
 	}
 
-	public ArrayList<Information> searchSQL(String message) {
+	public ArrayList<Information> searchSQL(String message) { //特定のデータでユーザー検索を行う機能
 
 		Connection con;
 		ArrayList<Information> infoList = new ArrayList<Information>();
@@ -80,7 +80,7 @@ public class LoginDAO extends DAO {
 
 	}
 
-	public ArrayList<Information> searchAll() {
+	public ArrayList<Information> searchAll() { //DBに入っている全ユーザー情報を取得
 
 		ArrayList<Information> infoList = new ArrayList<Information>();
 		Connection con;
@@ -120,7 +120,7 @@ public class LoginDAO extends DAO {
 	}
 
 	public int insert(String userId, String username, String fm, int y_birth, int d_birth, String mail, String zipCode,
-			String address, String pass, String question, String answer) {
+			String address, String pass, String question, String answer) { //ユーザー新規登録
 		// TODO 自動生成されたメソッド・スタブ
 		int count = 0;
 		System.out.println("2");
@@ -156,7 +156,7 @@ public class LoginDAO extends DAO {
 
 	}
 
-	public int updatePassword(String mail, String question, String answer, String pass, String passcheck)
+	public int updatePassword(String mail, String question, String answer, String pass, String passcheck) //質問を元にパスワードを変更する
 			throws Exception {
 		int check = 0;
 		System.out.println(mail + " " + question + " " + answer + " " + pass + " " + passcheck);
@@ -192,7 +192,7 @@ public class LoginDAO extends DAO {
 		return check;
 	}
 
-	public int update(String mail, String zipCode, String address, String userId)
+	public int update(String mail, String zipCode, String address, String userId) //設定されているユーザー情報を更新する
 			throws Exception {
 		Connection con = getConnection();
 		PreparedStatement st = con.prepareStatement(
@@ -210,7 +210,7 @@ public class LoginDAO extends DAO {
 
 	}
 
-	public int delete(String userId) {
+	public int delete(String userId) { //ユーザー退会
 		// TODO 自動生成されたメソッド・スタブ
 		int count = 0;
 		System.out.println("2");

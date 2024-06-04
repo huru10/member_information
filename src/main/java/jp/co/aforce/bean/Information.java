@@ -1,17 +1,17 @@
 package jp.co.aforce.bean;
 
 public class Information {
-	private String userId;
-	private String username;
-	private String fm;
-	private int y_birth;
-	private int d_birth;
-	private String mail;
-	private String zipCode;
-	private String address;
-	private String pass;
-	private String question;
-	private String answer;
+	private String userId;		//ユーザーID
+	private String username;	//名前
+	private String fm;			//性別
+	private int y_birth;		//誕生年
+	private int d_birth;		//誕生日
+	private String mail;		//メールアドレス
+	private String zipCode;		//郵便番号
+	private String address;		//住所
+	private String pass;		//パスワード
+	private String question;	//秘密の質問
+	private String answer;		//秘密の質問の答え
 
 	public Information() {
 		super();
